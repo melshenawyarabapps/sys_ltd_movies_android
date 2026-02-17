@@ -196,7 +196,7 @@ This project is part of a three-repository solution:
 
 1. **Android Native App** (this repository): [sys_ltd_movies_android](https://github.com/melshenawyarabapps/sys_ltd_movies_android.git)
 2. **Flutter Module**: [sys_ltd_movies_flutter](https://github.com/melshenawyarabapps/sys_ltd_movies_flutter.git) - Movie list display with Bloc state management
-3. **iOS Native App**: [sys_ltd_movies_ios](https://github.com/melshenawyarabapps/sys_ltd_movies_ios.git) - iOS host application
+3. **iOS Native App**: [sysLtdMoviesIos](https://github.com/melshenawyarabapps/sysLtdMoviesIos.git) - iOS host application
 
 ## 👨‍💻 Author
 
