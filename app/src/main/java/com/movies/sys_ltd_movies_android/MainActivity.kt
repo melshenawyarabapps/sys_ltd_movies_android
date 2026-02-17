@@ -11,7 +11,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.movies.sys_ltd_movies_android.presentation.MoviesNavHost
 import com.movies.sys_ltd_movies_android.presentation.Screen
-import com.movies.sys_ltd_movies_android.ui.theme.Movies_androidTheme
+import com.movies.sys_ltd_movies_android.ui.theme.Sys_ltd_movies_androidTheme
 import dagger.hilt.android.AndroidEntryPoint
 import io.flutter.embedding.android.FlutterFragment
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Movies_androidTheme {
+            Sys_ltd_movies_androidTheme() {
                 val nc = rememberNavController()
                 navController = nc
                 MoviesNavHost(

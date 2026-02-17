@@ -40,7 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.movies.movies_android.R
+import com.movies.sys_ltd_movies_android.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
