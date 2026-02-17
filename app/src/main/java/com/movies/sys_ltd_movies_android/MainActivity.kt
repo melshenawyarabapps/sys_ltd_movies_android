@@ -1,6 +1,7 @@
 package com.movies.sys_ltd_movies_android
 
 
+
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.movies.sys_ltd_movies_android.presentation.MoviesNavHost
+import com.movies.sys_ltd_movies_android.presentation.Screen
+import com.movies.sys_ltd_movies_android.ui.theme.Movies_androidTheme
 import dagger.hilt.android.AndroidEntryPoint
 import io.flutter.embedding.android.FlutterFragment
 
@@ -18,6 +22,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            Movies_androidTheme {
+                val nc = rememberNavController()
+                navController = nc
+                MoviesNavHost(
+                    navController = nc,
+                    onShowMoviesClick = {
+                        launchFlutterModule()
+                    }
+                )
+            }
+        }
     }
 
     private fun launchFlutterModule() {
