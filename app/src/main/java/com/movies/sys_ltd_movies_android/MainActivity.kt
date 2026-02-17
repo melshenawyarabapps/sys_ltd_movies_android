@@ -1,47 +1,47 @@
 package com.movies.sys_ltd_movies_android
 
+
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.movies.sys_ltd_movies_android.ui.theme.Sys_ltd_movies_androidTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
+import io.flutter.embedding.android.FlutterFragment
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+
+    private var navController: NavHostController? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            Sys_ltd_movies_androidTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+    }
+
+    private fun launchFlutterModule() {
+        val flutterFragment = FlutterBridge.createFlutterFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .add(android.R.id.content, flutterFragment, FlutterBridge.TAG)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    override fun onAttachFragment(fragment: Fragment) {
+        super.onAttachFragment(fragment)
+        if (fragment is FlutterFragment) {
+            fragment.flutterEngine?.let { engine ->
+                FlutterBridge.configureChannel(engine) { movieId ->
+                    onMovieSelected(movieId)
                 }
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Sys_ltd_movies_androidTheme {
-        Greeting("Android")
+    fun onMovieSelected(movieId: Int) {
+        supportFragmentManager.popBackStack()
+        navController?.navigate(Screen.Trailer.createRoute(movieId))
     }
 }

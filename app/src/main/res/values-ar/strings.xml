@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">افلام</string>
+    <string name="show_list_of_movies">عرض قائمة الأفلام</string>
+    <string name="no_videos_found">لا توجد مقاطع فيديو</string>
+    <string name="loading">جار التحميل...</string>
+    <string name="error_occurred">حدث خطأ</string>
+    <string name="trailer">مقطورة</string>
+    <string name="invalid_movie_id">معرف الفيلم غير صالح</string>
+</resources>
