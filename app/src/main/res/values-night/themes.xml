@@ -2,7 +2,7 @@
 <resources>
     <style name="Theme.Sys_ltd_movies_android" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="android:colorBackground">@color/colorBackgroundDark</item>
         <item name="colorSurface">@color/colorSurfaceDark</item>
         <item name="colorOnSurface">@color/colorOnSurfaceDark</item>

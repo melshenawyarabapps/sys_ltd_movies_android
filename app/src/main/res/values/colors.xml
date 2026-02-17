@@ -3,16 +3,12 @@
     <color name="colorPrimary">#FF155EE5</color>
     <color name="colorOnPrimary">#FFFFFFFF</color>
     <color name="colorBackground">#FFF5F5F5</color>
-    <color name="colorOnBackground">#FF121212</color>
     <color name="colorSurface">#FFFFFFFF</color>
     <color name="colorOnSurface">#FF121212</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    
+
     <!-- Dark Theme Colors -->
     <color name="colorPrimaryDark">#FF367AFF</color>
     <color name="colorBackgroundDark">#FF121212</color>
     <color name="colorSurfaceDark">#FF1E1E1E</color>
-    <color name="colorOnBackgroundDark">#FFF5F5F5</color>
     <color name="colorOnSurfaceDark">#FFF5F5F5</color>
 </resources>

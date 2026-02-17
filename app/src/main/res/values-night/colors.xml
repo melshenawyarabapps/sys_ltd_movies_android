@@ -3,7 +3,6 @@
     <color name="colorPrimary">#FF4D94FF</color>
     <color name="colorOnPrimary">#FFFFFFFF</color>
     <color name="colorBackground">#FF121212</color>
-    <color name="colorOnBackground">#FFE6E1E5</color>
     <color name="colorSurface">#FF1E1E1E</color>
     <color name="colorOnSurface">#FFE6E1E5</color>
 </resources>
